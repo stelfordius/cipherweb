@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h4>{% block title %}Week 1{% endblock title %}</h4>
+{% endblock header %}
+
+<!--
+YK PQMD YMPQYAUEQXXQ NQDZTMDPF, U MY EADDK FA FQXX KAG FTMF PQEBUFQ AGD NQEF QRRADFE IQ TMHQ NQQZ GZMNXQ FA DQBMUD FTQ PMYMSQP BXMFQ. U RQMD FTMF FTQ RGYQE RDAY FTQ MPTQEUHQE IQ MBBXUQP YMK TMHQ PMYMSQP UF UDDQFDUQHMNXK, EUZOQ QHQZ FTAGST IQ IQDQ MNXQ FA DQMEEQYNXQ FTQ BMDFE, FTQ UYMSQ UE NMPXK RASSQP. FTQ FUYUZS UE GZRADFGZMFQ, IUFT FTQ BDUZOQ’E HUEUF MF TMZP, NGF U NQXUQHQ IQ YMK NQ MNXQ FA DQFDUQHQ YMFFQDE IUFT M ZQI EUFFUZS UR KAG MDQ MNXQ FA RUZP FTQ FUYQ FAPMK. YK EGBBXUQD TME ARRQDQP YQ FTQ ABBADFGZUFK FA FDK M ZQI BTAFASDMBTUO EKEFQY NMEQP AZ M RXQJUNXQ, BMBQD NMOWQP RUXY, ITUOT ETAGXP NQ DQEUEFMZF FA FTQ EADF AR MOOUPQZF FA ITUOT FTQ AFTQD UYMSQ EMPXK EGOOGYNQP. U WZAI FTMF KAG MDQ PQQBXK UZFQDQEFQP UZ FTQ MDF AR BTAFASDMBTK, MZP FTUE IAGXP NQ MZ QJOQXXQZF ABBADFGZUFK FA QJMYUZQ FTQ XMFQEF UZZAHMFUAZ. OMZ U OAZHUZOQ KAG FA MFFQZP M EUFFUZS FTUE MRFQDZAAZ, MRFQD FTQ YMFUZQQ?   AZ FTQ YMFFQD AR XQMDZUZS FA PQOUBTQD FTQ MPHQDFUEQYQZFE UZ XQ RUSMDA, U FTUZW KAG IUXX NQ PUEMBBAUZFQP! FTQ YQFTAPE GEQ FA QZODKBF FTQY MDQ ZAF EABTUEFUOMFQP, DQXKUZS AZ EUYBXQ EGNEFUFGFUAZE, ZGYQDUO OAPQE AD MZMSDMYE. YADQAHQD, FTQ OAZFQZFE FTQYEQXHQE MDQ YAEFXK XAHQ XQFFQDE AR FTQ RADXADZ EADF MZP GZXUWQXK FA QZFQDFMUZ KAG, FTAGST U PUP RUZP AZQ YQEEMSQ FTMF TMP NQQZ QZODKBFQP UZ M EXUSTFXK YADQ EABTUEFUOMFQP IMK MZP ITUOT EQQYQP M XUFFXQ AGF AR BXMOQ. UR KAG MDQ UZFQDQEFQP, U IUXX NDUZS UF FA FTQ EUFFUZS FTUE MRFQDZAAZ. UZ FTQ YQMZFUYQ, U FAAW FTQ XUNQDFK AR QZOAPUZS FTUE XQFFQD IUFT FTQ RMYAGE OUBTQD AR OMQEMD, ME U WZAI KAG MDQ RMYUXUMD IUFT UF.   UR KAG MDQ MHMUXMNXQ FTQZ BXQMEQ PA EQZP M YQEEQZSQD FA XQF YQ WZAI, MZP U IUXX BDQBMDQ FTQ EFGPUA.   KAGDE ME QHQD,   RDMZOAUE.
+-->
+
+{% block content %}
+<div class="container-fluid text-left ps-0">
+  <h5>Part A</h5>
+  <p>As with all weeks of the <a href="https://www.cipherchallenge.org">National Cipher Challenge 2026</a>, there are two parts to the puzzle.  This section relates to Part A.</p>
+</div>
+<hr>
+<div>
+  <p>You may expect the cipher challenge to start fairly straightforwardly, and indeed you would be right.  The first thing we can see about this cipher is that it still has its original word structure.  That is, the ciphertext words are of variable length and there is punctuation present, suggesting that only the actual letters have changed.  This means that we can start to guess what some of the words might be.</p>
+  <p>For example, we can some single letter words in our ciphertext, such as "U" and "M".  Given that the only common English words that consist of a single letter are "a" and "i", we can be reasonably confident that "a" in the original plaintext has been encrypted to either "U" or "M" in the ciphertext.  Similarly, we can be confident that "i" in our original plaintext has been encrypted to either "U" or "M" in the ciphertext (whichever one of "U" or "M" that doesn't stand for "a".)</p>
+  <p>Looking a bit deeper into the ciphertext, and knowing that "the" is the most common word in the English language, we might be able to work out what ciphertext string of letters stands for "the"</p>
+  <p>To do this, let's look at what three letter words we have in order of their first appearance and, more importantly, let's look at how many of them we have:
+  <div class="container-fluid align-text-center ps-0">
+    <div class="row">
+      <div class="col-sm-3">
+        <ul>"KAG" x 9</ul>
+        <ul>"AGD" x 1</ul>
+        <ul>"FTQ"&nbsp;x&nbsp;24</ul>
+        <ul>"YMK" x 2</ul>
+        <ul>"NGF" x 1</ul>        
+      </div>
+      
+      <div class="col-sm-3">
+        <ul>"ZQI" x 2</ul>
+        <ul>"MDQ" x 7</ul>
+        <ul>"TME" x 1</ul>
+        <ul>"FDK" x 1</ul>
+        <ul>"MDF" x 1</ul>
+      </div>
+      
+      <div class="col-sm-3">
+        <ul>"MZP" x 4</ul>
+        <ul>"OMZ" x 1</ul>
+        <ul>"GEQ" x 1</ul>
+        <ul>"ZAF" x 1</ul>
+        <ul>"PUP" x 1</ul>
+      </div>
+      
+      <div class="col-sm-3">
+        <ul>"AZQ" x 1</ul>        
+        <ul>"TMP" x 1</ul>
+        <ul>"IMK" x 1</ul>
+        <ul>"AGF" x 1</ul>
+        <ul>"XQF" x 1</ul>
+      </div>
+    </div>
+  </div>
+    
+  <p>Well, it seems like we have a clear winner - "FTQ".</p>
+  <section>
+    <h4>Using Python</h4>
+    <p>Now it's quite tedious, and prone to error, to try and find every three-letter word in a long ciphertext, so is there a way that Python could help?</p>
+    <p>Well, the first thing we might want to do is to create ourselves a constant containing all the letters of the alphabet, as this is likely to come in handy for many reasons when dealing with ciphertexts</p>
+    
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      <row>ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"</row>
+    </div>
+    
+    <p>You might notice that we use all capital letters for ALPHABET in the above.  This is simply the convention that constants (i.e. variables that don't vary!) get capital letters, whereas you will see shortly that variables (i.e. variables that do vary!) get all lower-case letters.</p>
+    <p>Another thing to notice is how we have assigned the string ABCDEFGHIJKLMNOPQRSTUVWXYZ to the constant ALPHABET - by using the equals sign (=) and putting the string in double-quotes (") after this. The equals sign is how we always assign a piece of data to a constant, or more commonly a variable, and the double-quotes tell Python that it is a string being assigned. You can in fact use single-quotes just as easily as Python treats them both the same in this case.  E.g. ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' would work just as well.</p>
+      
+    <p>The next thing we should think about doing is telling our Python script what the ciphertext is.  We do this by assigning the string of letters in the ciphertext to a variable, which we may as well call 'ciphertext'.
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      <row>ciphertext = """YK PQMD YMPQYAUEQXXQ NQDZTMDPF, U MY EADDK FA FQXX KAG FTMF PQEBUFQ AGD NQEF QRRADFE IQ TMHQ NQQZ GZMNXQ FA DQBMUD FTQ PMYMSQP BXMFQ. U RQMD FTMF FTQ RGYQE RDAY FTQ MPTQEUHQE IQ MBBXUQP YMK TMHQ PMYMSQP UF UDDQFDUQHMNXK, EUZOQ QHQZ FTAGST IQ IQDQ MNXQ FA DQMEEQYNXQ FTQ BMDFE, FTQ UYMSQ UE NMPXK RASSQP. FTQ FUYUZS UE GZRADFGZMFQ, IUFT FTQ BDUZOQ’E HUEUF MF TMZP, NGF U NQXUQHQ IQ YMK NQ MNXQ FA DQFDUQHQ YMFFQDE IUFT M ZQI EUFFUZS UR KAG MDQ MNXQ FA RUZP FTQ FUYQ FAPMK. YK EGBBXUQD TME ARRQDQP YQ FTQ ABBADFGZUFK FA FDK M ZQI BTAFASDMBTUO EKEFQY NMEQP AZ M RXQJUNXQ, BMBQD NMOWQP RUXY, ITUOT ETAGXP NQ DQEUEFMZF FA FTQ EADF AR MOOUPQZF FA ITUOT FTQ AFTQD UYMSQ EMPXK EGOOGYNQP. U WZAI FTMF KAG MDQ PQQBXK UZFQDQEFQP UZ FTQ MDF AR BTAFASDMBTK, MZP FTUE IAGXP NQ MZ QJOQXXQZF ABBADFGZUFK FA QJMYUZQ FTQ XMFQEF UZZAHMFUAZ. OMZ U OAZHUZOQ KAG FA MFFQZP M EUFFUZS FTUE MRFQDZAAZ, MRFQD FTQ YMFUZQQ?   AZ FTQ YMFFQD AR XQMDZUZS FA PQOUBTQD FTQ MPHQDFUEQYQZFE UZ XQ RUSMDA, U FTUZW KAG IUXX NQ PUEMBBAUZFQP! FTQ YQFTAPE GEQ FA QZODKBF FTQY MDQ ZAF EABTUEFUOMFQP, DQXKUZS AZ EUYBXQ EGNEFUFGFUAZE, ZGYQDUO OAPQE AD MZMSDMYE. YADQAHQD, FTQ OAZFQZFE FTQYEQXHQE MDQ YAEFXK XAHQ XQFFQDE AR FTQ RADXADZ EADF MZP GZXUWQXK FA QZFQDFMUZ KAG, FTAGST U PUP RUZP AZQ YQEEMSQ FTMF TMP NQQZ QZODKBFQP UZ M EXUSTFXK YADQ EABTUEFUOMFQP IMK MZP ITUOT EQQYQP M XUFFXQ AGF AR BXMOQ. UR KAG MDQ UZFQDQEFQP, U IUXX NDUZS UF FA FTQ EUFFUZS FTUE MRFQDZAAZ. UZ FTQ YQMZFUYQ, U FAAW FTQ XUNQDFK AR QZOAPUZS FTUE XQFFQD IUFT FTQ RMYAGE OUBTQD AR OMQEMD, ME U WZAI KAG MDQ RMYUXUMD IUFT UF.   UR KAG MDQ MHMUXMNXQ FTQZ BXQMEQ PA EQZP M YQEEQZSQD FA XQF YQ WZAI, MZP U IUXX BDQBMDQ FTQ EFGPUA.   KAGDE ME QHQD,   RDMZOAUE."""</row>
+    </div>
+    <p>You can see that we've used the equals sign (=) when we've assigned the string to the variable we've called ciphertext and, in this case, we've used """ either side of the string to let Python know it is a <i>multi-line</i> string.</p>
+    <p>We shouldn't need such a long piece of text again for a bit but we do still want to set up some extra variables</p>
+    
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      <row>curr_word = ""</row>
+      <div class="width:100%"></div>
+      <row>three_letter_words = []</row>
+    </div>
+    
+    <div>
+      <p>The first of these lines sets up a variable that consists of an 'empty string'.  We are going to use this variable to build up each word as we go through the ciphertext one character at a time.</p>
+      <p>The second variable we are setting up is of a different data type entirely - a list.  Lists are enclosed in square brackets and in this case we have set up an empty list. Lists can however be set up with contents.  E.g. my_name = ["Bob", "Jones"] is a perfectly valid list.  Such a list has "Bob" at element position 0 and at its element position 1 it has "Jones".  It may seem odd to start counting at zero but that's just how it is!</p>
+      <p>Now let's cycle through our ciphertext using a for...loop and build a list of the three letter words as we go.</p>
+    </div>
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      
+      <row>for letter in ciphertext:</row>
+      <div class="width:100%"></div>
+      
+      <row>&nbsp; if letter in ALPHABET:</row>
+      <div class="width:100%"></div>
+      
+      <row>&nbsp; &nbsp; curr_word += letter</row>
+      <div class="width:100%"></div>
+      
+      <row>&nbsp; else:</row>
+      <div class="width:100%"></div>
+      
+      <row>&nbsp; &nbsp; if len(curr_word) == 3:</row>
+      <div class="width:100%"></div>
+      
+      <row>&nbsp; &nbsp; &nbsp; three_letter_words.append(curr_word)</row>
+      <div class="width:100%"></div>
+      
+      <row>&nbsp; &nbsp; curr_word = ""</row>
+      <div class="width:100%"></div>
+      
+    </div>
+    <div>
+      <p>This is our most complicated bit of code so let's look at it, one line at a time.</p>
+    </div>
+
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      
+      <row>for letter in ciphertext:</row>
+      <div class="width:100%"></div>
+    </div>
+    
+    <div>
+      <p>This line is how all 'for...loops' start.  The 'letter' part of this line is the name for a new variable created just for this loop.  It will be assigned a new character of the string for each pass of the loop.  Given the first letter of our ciphertext is "Y", letter will be assigned "Y" on the first pass of the loop as the <i>in ciphertext</i> bit is telling python that is the string we are wanting to cycle through.</p>
+      <p></p>
+      
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      
+      <row>&nbsp; if letter in ALPHABET:</row>
+      <div class="width:100%"></div>
+    </div>
+    
+    <div>
+      <p>This next line checks whether our letter is in our constant ALPHABET, and of course Y is, so Python knows to carry out the next line indented below the colon after the 'if...'.</p>
+    </div>
+    
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      
+      <row>&nbsp; &nbsp; curr_word += letter</row>
+      <div class="width:100%"></div>
+    </div>
+    
+    <div>
+      <p>This line tells Python to 'add' that letter to our 'curr_word' variable.  This variable had started as empty (""), so adding "Y" to it makes it now equal "Y".  Python has no more lines to consider under that 'if...' and it doesn't need to consider what's under 'else' as "Y" was in the alphabet.  Python therefore now has nothing more to do with this particular pass of the loop and so goes back to the start with the next character in our string.</p>
+      
+      <p>Now the next character this time is "K", so when Python confirms that "K" is in the alphabet, it will add this letter to our 'curr_word' variable.  It uses the <b>+=</b> combination of characters to do this.  This is just a shorthand way of saying curr_word = curr_word + letter.  As curr_word currently is "Y" from the first pass of the loop, adding "K" to it makes it "YK".</p>
+      
+      <p>Now the next pass of the loop is more interesting.  The next character Python comes to is the space between "YK" and "PQMD".  Now a space is <i>not</i> in our ALPHABET variable and so Python will enter the 'else:' part of the code.
+      </p>
+    </div>
+
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      <row>&nbsp; &nbsp; if len(curr_word) == 3:</row>
+      <div class="width:100%"></div>
+    </div>
+    
+    <div>
+      <p>This line uses another <b>if</b> to ask if the length of curr_word is 3.  It does this using the <b class="text-info">len</b> function.  The double equals sign is not a mistake - if we want Python to evaluate whether one value equals another, we always use <b class="text-info">==</b>.  (This stops Python getting confused and thinking you want to use an equals sign to assign a value to a variable or constant - the other use of the equals sign that we saw earlier.</p>
+    
+      <p>Now in this case, the length of "YK" is clearly not 3.  It is of course 2, so Python skips the indented line under this if statement.</p>
+      <p>Instead, Python will go to the line below that, which <i>isn't</i> indented relative to the 'if len(curr_word)...' line.</p>
+    </div>
+    
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      <row>&nbsp; curr_word = ""</row>
+      <div class="width:100%"></div>
+    </div>
+    
+    <div>
+      <p>This line resets curr_word to an empty string before the next cycle of the loop.  By this point, we have got to the end of our first word, found it not to have a length of 3, and have therefore not done anything with it</p>
+      <p>A similar thing will happen for the next word.  curr_word will have "P", "Q", "M" and "D" added to it for the next four cycles before the next space is not in the alphabet.  Python will find that "PQMD" doesn't have a length of 3, and will also not do anything with this word and will reset curr_word to "".</p>
+      <p>Similar things will happen with the next words "YMPQYAUEQXXQ", "NQDZTMDPF", "U", "MY", "EADDK", "FA" and "FQXX", but then we will finally get to a three letter word - "KAG".</p>
+      <p>Now Python will follow the path indented under the "if len(curr_word) == 3:" line.</p>
+
+    <div class="mx-auto bg-white rounded p-4 text-start font-monospace mb-3" style="width: 80%; color: #1a1a1a;">
+      <row>&nbsp; &nbsp; three_letter_words.append(curr_word)</row>
+      <div class="width:100%"></div>
+    </div>
+    
+    <div>
+      <p>The word <span class="text-info">append</span> is a 'method' of the list 'three_letter_words' and means add whatever is in the brackets after it (in this case our curr_word) as an element to the end of the list 'three_letter_words'.  In this case, this is the end of an empty list so will in fact become the first item in the list.  three_letter_words at this point therefore is represented as ["KAG"].</p>
+      <p>Now Python will carry on through the whole loop, adding every three letter word it comes across, and resetting curr_word back to "" every time it comes to a break in a word - i.e. a 'space' or a punctuation mark (with punctuation marks also not in 'ALPHABET').</p>
+    </div>
+    </section> 
+{% endblock content %}

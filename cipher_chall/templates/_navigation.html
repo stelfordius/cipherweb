@@ -1,0 +1,20 @@
+<nav class="navbar-expand-sm">
+	<div class="container-fluid text-secondary ps-0">
+		<ul class="navbar-nav">
+			<a class="text-secondary nav-tabs text-decoration-none my-2 ms-0 me-3" href="{{ url_for('pages.home') }}">Home</a></li>
+			<a class="text-secondary nav-tabs text-decoration-none my-2 ms-0 me-3" href="{{ url_for('pages.week_1') }}">Week 1</a></li>
+			<a class="text-secondary nav-tabs text-decoration-none my-2 ms-0 me-3" href="{{ url_for('pages.home') }}">Week 2</a></li> <!-- temp pages.home until glossary page written! -->
+			<a class="text-secondary nav-tabs text-decoration-none my-2 ms-0 me-3" href="{{ url_for('pages.home') }}">Week 3</a></li> <!-- temp pages.home until glossary page written! -->
+			<a class="text-secondary nav-tabs text-decoration-none my-2 ms-0 me-3" href="{{ url_for('pages.home') }}">Glossary</a></li> <!-- temp pages.home until glossary page written! -->
+		</ul>
+	</div>
+</nav>
+
+<!-- Needed to add the following to make the navbar look acceptable:
+
+class="navbar navbar-expand-sm bg-dark" to make the navbar expandable and to have a dark backgrounf
+class="container-fluid" to make the navbar resizeable
+class="nav-item" to make the individual links follow the right pattern
+changed to "nav-tabs" - looks nicer?  but might try back to nav-item later if it causes issues...
+
+-->

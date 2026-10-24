@@ -1,11 +1,28 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<h2>{% block title %}Home{% endblock title %}</h2>
+<h4>{% block title %}Introduction{% endblock title %}</h4>
 {% endblock header %}
 
 {% block content %}
-<p>
-	Learn more about this project by visiting the <a href="{{ url_for('pages.about') }}">About page</a>
+<div class="container-fluid text-left ps-0">
+  <h5>The Cipher Challenge</h5>
+  <p>This is the introductory page of my website that will show how I used
+  Python to help do some of the tasks associated with the
+  <a href="https://www.cipherchallenge.org">National Cipher Challenge 2026</a>.
+  Python is a popular and accessible coding language that is very useful for manipulating 'strings'.</p>
+</div>
+<hr>
+<div>
+  <h6>Strings</h6>
+  <p>'Strings' are the class of data that consists of individual characters that are 'strung together' in a specific order.  For example, "Hello" is a string of five characters - "H", "e", "l", "l" and "o"</p>
+  <p>Being able to manipulate strings is useful when it comes to cryptography as both the <span data-toggle="tooltip" title="A ciphertext is the encoded form of a message" class="text-warning fst-italic">
+    ciphertext
+  </span> and <span data-toggle="tooltip" title="A plaintext is the unencoded (or decrypted) form of a message" class="text-warning fst-italic">
+    plaintext
+  </span> versions of a message can be stored as strings.  Furthermore, we can code programs that convert a plaintext to a ciphertext (encryption), and a ciphertext to a plaintext (decryption).</p>
+  <p>Use the menu to take you to the appropriate page for the week of the cipher challenge that you are interested in</p>
+</div>
 </p>
+		
 {% endblock content %}

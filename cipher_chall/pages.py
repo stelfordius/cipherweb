@@ -6,6 +6,6 @@ bp = Blueprint("pages", __name__)
 def home():
 	return render_template("pages/home.html")
 
-@bp.route("/about")
-def about():
-	return render_template("pages/about.html")
+@bp.route("/week_1")
+def week_1():
+	return render_template("pages/week_1.html")
